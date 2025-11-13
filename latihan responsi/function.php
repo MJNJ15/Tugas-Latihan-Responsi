@@ -39,7 +39,8 @@ function login($data) {
     $hasil = mysqli_query($koneksidb, $query);
 
     if(mysqli_num_rows($hasil) > 0) {
-        $_SESSION["username"] = $username;
+        $data = mysqli_fetch_assoc($hasil);
+        $_SESSION["username"] = $data["nama_lengkap"];
         header("location: home.php");
     }else {
         header("location: login.php?pesan=gagal");

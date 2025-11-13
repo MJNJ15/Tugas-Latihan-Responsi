@@ -66,7 +66,7 @@ $totalharga = 0;
                     <td><?= $data["judul_film"]; ?></td>
                     <td><?= $data["sutradara"]; ?></td>
                     <td>Rp <?= number_format($data["harga_tiket"], 0, ",", "."); ?></td>
-                    <td><a href="editfilm.php?id=<?= $data["id_film"]; ?>">Edit</a> | <a href="hapusfilm.php?id=<?= $data["id_film"]; ?>" style="color: red;">Hapus</a></td>
+                    <td><a href="editfilm.php?id=<?= $data["id_film"]; ?>">Edit</a> | <a href="hapusfilm.php?id=<?= $data["id_film"]; ?>" style="color: red;" onclick="return confirm('Apakah anda yakin ingin mengahpus film ini?')">Hapus</a></td>
                 </tr>
 
                 <?php } ?>
