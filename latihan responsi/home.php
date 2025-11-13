@@ -65,7 +65,7 @@ $totalharga = 0;
                     <td><?= $data["id_film"]; ?></td>
                     <td><?= $data["judul_film"]; ?></td>
                     <td><?= $data["sutradara"]; ?></td>
-                    <td><?= $data["harga_tiket"]; ?></td>
+                    <td>Rp <?= number_format($data["harga_tiket"], 0, ",", "."); ?></td>
                     <td><a href="editfilm.php?id=<?= $data["id_film"]; ?>">Edit</a> | <a href="hapusfilm.php?id=<?= $data["id_film"]; ?>" style="color: red;">Hapus</a></td>
                 </tr>
 
@@ -73,7 +73,7 @@ $totalharga = 0;
 
                 <tr>
                     <td style="background-color: aliceblue;" colspan="3">Total Haga Tiket</td>
-                    <td style="background-color: aliceblue;" colspan="2"><?= $totalharga; ?></td>
+                    <td style="background-color: aliceblue;" colspan="2">Rp <?= number_format($totalharga, 0, ",", "."); ?></td>
                 </tr>
             </table>
         </div>
